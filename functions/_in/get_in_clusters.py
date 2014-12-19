@@ -10,14 +10,19 @@ from os import walk
 import re
 
 
-def in_clusters(mypath):
+def in_clusters(mypath, file_end):
     '''
     Store the paths and names of all the input clusters stored in the
     input_dir folder.
     '''
 
     # Path where cluster data files are stored.
-    input_dir = join(mypath, 'input/')
+    #input_dir = join(mypath, 'input/')
+
+    ##### SEMINARE BLOCK #####
+    in_folder = 'input/mc_%s/' % file_end
+    input_dir = join(mypath, in_folder)
+    ##### SEMINARE BLOCK #####
 
     # Store subdir names and file names in cl_files.
     cl_files = []

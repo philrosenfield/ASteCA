@@ -38,7 +38,7 @@ from functions.out.cl_members_file import cluster_members_file as c_m_f
 from functions.out.done_move import done_move as dm
 
 
-def asteca_funcs(mypath, cl_file, ip_list, R_in_place):
+def asteca_funcs(mypath, cl_file, ip_list, R_in_place, file_end):
     '''
     Container that holds the calls to all the functions.
     '''
@@ -53,7 +53,7 @@ def asteca_funcs(mypath, cl_file, ip_list, R_in_place):
 
     # Get file names and paths.
     clust_name, data_file, memb_file, output_dir, output_subdir, \
-    memb_file_out, write_name = n_p(mypath, cl_file)
+    memb_file_out, write_name = n_p(mypath, cl_file, file_end)
     print 'Analizing cluster {} ({}).'.format(clust_name, g.mode)
 
     # Get data from semi-data input file.

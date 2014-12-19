@@ -45,7 +45,7 @@ def main():
 
         try:
             # Call function that calls all sub-functions sequentially.
-            af(mypath, cl_file, ip_list, R_in_place)
+            af(mypath, cl_file, ip_list, R_in_place, file_end)
         except Exception:
             print '\n!!! --> {}/{} could not be processed <-- !!!\n'.format(
                 *cl_file)

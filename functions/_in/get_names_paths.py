@@ -3,13 +3,16 @@ from os.path import join, exists
 from os import makedirs, extsep
 
 
-def names_paths(mypath, cl_file):
+def names_paths(mypath, cl_file, file_end):
     '''
     Generate names and paths to be used by several functions.
     '''
 
     # Hardcoded in/out folder names.
-    in_fold = 'input'
+    #in_fold = 'input'
+    ##### SEMINARE BLOCK #####
+    in_fold = 'input/mc_%s/' % file_end
+    ##### SEMINARE BLOCK #####
     out_fold = 'output'
 
     # Store cluster's name without extension.

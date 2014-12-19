@@ -43,6 +43,12 @@ def get_data(data_file):
     data = np.genfromtxt(data_file, dtype=float, filling_values=99.999,
                          unpack=True)
 
+    ##### SEMINARE BLOCK #####
+    if len(data) == 12:
+        id_inx, x_inx, y_inx, m_inx, em_inx, c_inx, ec_inx = \
+        0, 1, 2, 3, 4, 6, 7
+    ##### SEMINARE BLOCK #####
+
     # Read data colums, except IDs.
     x_data, y_data, mag_data, e_mag, col1_data, e_col1 = \
     data[x_inx], data[y_inx], data[m_inx], data[em_inx],\
